@@ -15,14 +15,16 @@ interface PriceInfoProps {
   };
   swapDirection: 'AtoB' | 'BtoA';
   poolInfo: {
+    price: number;
     tokenAReserve: number;
     tokenBReserve: number;
-    price: number;
-  };
+  } | null;
   isPriceImpactHigh: boolean;
 }
 
 export function PriceInfo({ tokenA, tokenB, swapDirection, poolInfo, isPriceImpactHigh }: PriceInfoProps) {
+  if (!poolInfo) return null; // Early return if no pool info
+
   // Calculate the display price
   const price = swapDirection === 'AtoB' 
     ? poolInfo.price 

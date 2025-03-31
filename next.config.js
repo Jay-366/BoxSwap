@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  webpack: (config) => {
+    config.externals.push('encoding', 'pino-pretty', 'lokijs', 'webcrypto');
+    return config;
+  },
   images: {
     domains: [
       'raw.githubusercontent.com',
