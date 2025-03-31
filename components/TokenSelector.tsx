@@ -73,7 +73,7 @@ export function TokenSelector({ selectedToken, onSelectToken }: TokenSelectorPro
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 bg-card-dark rounded-lg px-3 py-2 border border-gray-700 hover:border-gray-500"
+        className="flex items-center space-x-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg px-3 py-2 border border-gray-700 hover:border-gray-500"
       >
         {currentToken.logoURI && (
           <img 
@@ -95,15 +95,15 @@ export function TokenSelector({ selectedToken, onSelectToken }: TokenSelectorPro
       </button>
       
       {isOpen && (
-        <div className="absolute mt-2 w-64 bg-card-dark border border-gray-700 rounded-lg shadow-lg z-50">
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white shadow-lg rounded-lg border border-gray-200 z-50">
           <div className="p-3 border-b border-gray-700">
             <h3 className="font-semibold">Select a token</h3>
           </div>
-          <div className="max-h-64 overflow-y-auto">
+          <div className="max-h-64 overflow-y-auto z-50 relative bg-white">
             {DEMO_TOKENS.map(token => (
               <button
                 key={token.mint}
-                className="w-full flex items-center p-3 hover:bg-card transition-colors"
+                className="w-full flex items-center p-3 hover:bg-gray-200 transition-colors"
                 onClick={() => handleSelectToken(token)}
               >
                 {token.logoURI && (

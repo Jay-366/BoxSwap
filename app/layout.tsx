@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { WalletProviders } from '@/components/WalletProviders'
 import { Navigation } from '@/components/Navigation'
-import { Novatrix } from "uvcanvas"
+import NovatrixBackground from '@/components/NovatrixBackground'
 
 export const metadata: Metadata = {
   title: 'Solana Liquidity Pool',
@@ -18,12 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="relative min-h-screen">
-          {/* Background Novatrix */}
-          <div className="fixed inset-0 -z-10">
-            <Novatrix />
-          </div>
-          
-          {/* Main content */}
+          <NovatrixBackground />
           <div className="relative z-10">
             <WalletProviders>
               <div className="min-h-screen flex flex-col">

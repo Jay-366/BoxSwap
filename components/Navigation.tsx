@@ -13,14 +13,13 @@ export function Navigation() {
     { name: 'Home', path: '/' },
     { name: 'Swap', path: '/swap' },
     { name: 'Pool', path: '/pool' },
-    { name: 'Liquidity', path: '/liquidity' },
-    { name: 'Stats', path: '/stats' },
+    
   ];
 
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="bg-transparent py-4 border-b border-gray-100">
+    <nav className="bg-white bg-opacity-20 backdrop-blur-sm py-4 border-b ">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">

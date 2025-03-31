@@ -352,14 +352,14 @@ export default function SwapPage() {
   
   return (
     <div className="container mx-auto max-w-lg px-4">
-      <div className="card bg-card-dark">
+      <div className="card bg-white bg-opacity-20 backdrop-blur-sm">
         <h1 className="text-2xl font-bold mb-6 text-center">Swap</h1>
         
         {/* Swap Form */}
-        <div className="rounded-xl bg-card p-4 mb-4">
+        <div className="rounded-xl bg-white bg-opacity-20 backdrop-blur-sm p-4 mb-4">
           <div className="flex justify-between items-center mb-2">
             <span>From</span>
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-black">
               Balance: {tokenA.balance.toFixed(6)} {tokenA.symbol}
             </span>
           </div>
@@ -368,13 +368,14 @@ export default function SwapPage() {
             <TokenSelector 
               selectedToken={tokenA}
               onSelectToken={setTokenA}
+              className="bg-white bg-opacity-20 backdrop-blur-sm"
             />
             <input
               type="number"
               placeholder="0.00"
               value={swapAmount}
               onChange={(e) => setSwapAmount(e.target.value)}
-              className="input flex-grow text-right text-xl"
+              className="input flex-grow text-right text-xl bg-white bg-opacity-20 backdrop-blur-sm"
             />
           </div>
           
@@ -382,7 +383,7 @@ export default function SwapPage() {
           <div className="flex justify-center -my-3 relative z-10">
             <button 
               onClick={switchTokens}
-              className="bg-card-dark p-2 rounded-full border border-gray-700 hover:border-primary"
+              className="bg-white bg-opacity-20 backdrop-blur-sm p-2 rounded-full border border-gray-300 hover:border-primary"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
@@ -392,7 +393,7 @@ export default function SwapPage() {
           
           <div className="flex justify-between items-center mb-2 mt-4">
             <span>To</span>
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-black">
               Balance: {tokenB.balance.toFixed(6)} {tokenB.symbol}
             </span>
           </div>
@@ -401,13 +402,14 @@ export default function SwapPage() {
             <TokenSelector 
               selectedToken={tokenB}
               onSelectToken={setTokenB}
+              className="bg-white bg-opacity-20 backdrop-blur-sm"
             />
             <input
               type="text"
               placeholder="0.00"
               value={outputAmount}
               readOnly
-              className="input flex-grow text-right text-xl bg-card-dark"
+              className="input flex-grow text-right text-xl bg-white bg-opacity-20 backdrop-blur-sm"
             />
           </div>
         </div>
@@ -451,7 +453,7 @@ export default function SwapPage() {
         <button
           onClick={executeSwap}
           disabled={!publicKey || !poolInfo || !swapAmount || parseFloat(swapAmount) <= 0 || !outputAmount}
-          className="btn btn-primary w-full py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+          className="btn bg-black text-white w-full py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {!publicKey 
             ? 'Connect Wallet' 
