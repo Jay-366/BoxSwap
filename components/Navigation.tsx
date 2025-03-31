@@ -20,13 +20,12 @@ export function Navigation() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="bg-card-dark py-4 border-b border-gray-800">
+    <nav className="bg-transparent py-4 border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <span className="text-solana-purple font-bold text-2xl mr-1">Sol</span>
-              <span className="text-solana-green font-bold text-2xl">Swap</span>
+            <Link href="/" className="flex items-center font-bold text-2xl mr-1">
+              <span className="text-black ">SolSwap </span>
             </Link>
             <div className="hidden md:flex ml-10 space-x-8">
               {routes.map(route => (
@@ -35,8 +34,8 @@ export function Navigation() {
                   href={route.path}
                   className={`${
                     isActive(route.path)
-                      ? 'text-primary border-b-2 border-primary'
-                      : 'text-gray-300 hover:text-white'
+                      ? 'text-primary-dark border-b-2 border-primary'
+                      : 'text-black hover:text-primary'
                   } py-2 text-sm font-medium`}
                 >
                   {route.name}
@@ -47,7 +46,9 @@ export function Navigation() {
 
           <div className="flex items-center">
             <div className="hidden md:block">
-              <WalletMultiButton />
+              <div className="scale-75 rounded-full overflow-hidden">
+                <WalletMultiButton className="!bg-black !text-white !rounded-full !px-4 !py-2" />
+              </div>
             </div>
             
             {/* Mobile menu button */}
@@ -84,7 +85,7 @@ export function Navigation() {
                 className={`${
                   isActive(route.path)
                     ? 'bg-primary text-white'
-                    : 'text-gray-300 hover:bg-card hover:text-white'
+                    : 'text-black hover:bg-primary'
                 } block px-3 py-2 rounded-md text-base font-medium`}
                 onClick={() => setIsOpen(false)}
               >
@@ -92,7 +93,9 @@ export function Navigation() {
               </Link>
             ))}
             <div className="pt-4 pb-2">
-              <WalletMultiButton />
+              <div className="scale-75 rounded-full overflow-hidden">
+                <WalletMultiButton className="!bg-black !text-white !rounded-full !px-4 !py-2" />
+              </div>
             </div>
           </div>
         </div>

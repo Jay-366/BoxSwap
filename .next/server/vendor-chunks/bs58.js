@@ -1,3 +1,4 @@
+"use strict";
 /*
  * ATTENTION: An "eval-source-map" devtool has been used.
  * This devtool is neither made for production nor for readable output files.
@@ -16,7 +17,7 @@ exports.modules = {
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var basex = __webpack_require__(/*! base-x */ \"(ssr)/./node_modules/base-x/src/index.js\")\nvar ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'\n\nmodule.exports = basex(ALPHABET)\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvYnM1OC9pbmRleC5qcyIsIm1hcHBpbmdzIjoiQUFBQSxZQUFZLG1CQUFPLENBQUMsd0RBQVE7QUFDNUI7O0FBRUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zb2xhbmEtbGlxdWlkaXR5LXBvb2wvLi9ub2RlX21vZHVsZXMvYnM1OC9pbmRleC5qcz9iZTBiIl0sInNvdXJjZXNDb250ZW50IjpbInZhciBiYXNleCA9IHJlcXVpcmUoJ2Jhc2UteCcpXG52YXIgQUxQSEFCRVQgPSAnMTIzNDU2Nzg5QUJDREVGR0hKS0xNTlBRUlNUVVZXWFlaYWJjZGVmZ2hpamttbm9wcXJzdHV2d3h5eidcblxubW9kdWxlLmV4cG9ydHMgPSBiYXNleChBTFBIQUJFVClcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/bs58/index.js\n");
+eval("\nvar basex = __webpack_require__(/*! base-x */ \"(ssr)/./node_modules/base-x/src/index.js\");\nvar ALPHABET = \"123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz\";\nmodule.exports = basex(ALPHABET);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvYnM1OC9pbmRleC5qcyIsIm1hcHBpbmdzIjoiO0FBQUEsSUFBSUEsUUFBUUMsbUJBQU9BLENBQUM7QUFDcEIsSUFBSUMsV0FBVztBQUVmQyxPQUFPQyxPQUFPLEdBQUdKLE1BQU1FIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vc29sYW5hLWxpcXVpZGl0eS1wb29sLy4vbm9kZV9tb2R1bGVzL2JzNTgvaW5kZXguanM/NWFmNSJdLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgYmFzZXggPSByZXF1aXJlKCdiYXNlLXgnKVxudmFyIEFMUEhBQkVUID0gJzEyMzQ1Njc4OUFCQ0RFRkdISktMTU5QUVJTVFVWV1hZWmFiY2RlZmdoaWprbW5vcHFyc3R1dnd4eXonXG5cbm1vZHVsZS5leHBvcnRzID0gYmFzZXgoQUxQSEFCRVQpXG4iXSwibmFtZXMiOlsiYmFzZXgiLCJyZXF1aXJlIiwiQUxQSEFCRVQiLCJtb2R1bGUiLCJleHBvcnRzIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/bs58/index.js\n");
 
 /***/ })
 

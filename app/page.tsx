@@ -13,14 +13,14 @@ export default function Home() {
         <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-solana-purple to-solana-green inline-block text-transparent bg-clip-text">
           Solana Liquidity Pool
         </h1>
-        <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+        <p className="text-xl text-black mb-10 max-w-2xl mx-auto">
           Trade, provide liquidity, and earn rewards on the fastest, most efficient decentralized exchange built on Solana.
         </p>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap text-black justify-center gap-4">
           <Link href="/swap" className="btn btn-primary text-lg px-8 py-3">
             Start Trading
           </Link>
-          <Link href="/pool" className="btn btn-outline text-lg px-8 py-3">
+          <Link href="/pool" className="btn btn-outline text-black text-lg px-8 py-3">
             View Pools
           </Link>
         </div>
