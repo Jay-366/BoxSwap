@@ -12,7 +12,7 @@ export default function Navigation() {
   const routes = [
     { name: 'Home', path: '/' },
     { name: 'Swap', path: '/swap' },
-    { name: 'Pool', path: '/pool' },
+   
     
   ];
 
@@ -24,7 +24,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center font-bold text-2xl mr-1">
-              <span className="text-black ">SolSwap </span>
+              <span className="text-black ">BoxSwap </span>
             </Link>
             <div className="hidden md:flex ml-10 space-x-8">
               {routes.map(route => (

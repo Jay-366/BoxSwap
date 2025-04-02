@@ -45,9 +45,9 @@ export default function RootLayout({
                   <main className="flex-grow py-8">
                     {children}
                   </main>
-                  <footer className="bg-card-dark py-6">
-                    <div className="container mx-auto px-4 text-center text-gray-400">
-                      <p>Built with ❤️ on Solana</p>
+                  <footer className="bg-white bg-opacity-20 backdrop-blur-sm py-6">
+                    <div className="container text-black mx-auto px-4 text-center ">
+                      <p>Built on Solana</p>
                     </div>
                   </footer>
                 </div>

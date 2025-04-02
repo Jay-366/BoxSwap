@@ -169,7 +169,19 @@ export default function SwapPage() {
       await connection.confirmTransaction(signature, 'confirmed');
 
       setStatus({
-        message: `Swap successful! Tx: ${signature.slice(0, 8)}...`,
+        message: (
+          <span>
+            Swap successful! Tx:{' '}
+            <a 
+              href={`https://explorer.solana.com/tx/${signature}?cluster=devnet`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-primary"
+            >
+              {signature.slice(0, 8)}...
+            </a>
+          </span>
+        ),
         type: 'success'
       });
 
@@ -268,7 +280,11 @@ export default function SwapPage() {
                 <span>{status.message}</span>
               </div>
             )}
-            {status.type !== 'loading' && status.message}
+            {status.type !== 'loading' && (
+              typeof status.message === 'string' 
+                ? status.message 
+                : status.message
+            )}
           </div>
         )}
         
